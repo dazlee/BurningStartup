@@ -1,0 +1,110 @@
+<template name="home">
+<div class="">
+	<h1 class="header center red-text text-lighten-2">Burning!</h1>
+	<div class="section">
+		<div class="row">
+			<h5>Initial Capital</h5>
+			<div class="input-field col s12 m6">
+				<i class="mdi-editor-attach-money prefix"></i>
+				<input id="initial-capital" type="text" class="validate">
+				<label for="initial-capital">Initial Capital $NT</label>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="section">
+		<div class="row">
+			<h5>Beginning fees</h5>
+			<div class="input-field col s12 l4">
+				<i class="mdi-editor-attach-money prefix"></i>
+				<input id="legal" type="text" class="validate">
+				<label for="legal">Legal $NT</label>
+			</div>
+			<div class="input-field col s12 l4">
+				<i class="mdi-editor-attach-money prefix"></i>
+				<input id="stationary" type="text" class="validate">
+				<label for="stationary">Stationary $NT</label>
+			</div>
+			<div class="input-field col s12 l4">
+				<i class="mdi-editor-attach-money prefix"></i>
+				<input id="others" type="text" class="validate">
+				<label for="others">Others $NT</label>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="section">
+		<div class="row">
+			<h5>Monthly Expensive</h5>
+			<div class="input-field col s12 m6 l4">
+				<i class="mdi-editor-attach-money prefix"></i>
+				<input id="office-rent" type="text" class="validate">
+				<label for="office-rent">Office Rent $NT</label>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="section">
+		<div class="row">
+			<h5>Employees</h5>
+			<div class="input-field col s12 m6 l2">
+				<i class="mdi-social-person prefix"></i>
+				<input id="name" type="text" class="validate">
+				<label for="name">Name</label>
+			</div>
+			<div class="input-field col s12 m6 l3">
+				<i class="mdi-image-navigate-next prefix"></i>
+				<input id="title" type="text" class="validate">
+				<label for="title">Title</label>
+			</div>
+			<div class="input-field col s12 m6 l3">
+				<i class="mdi-editor-attach-money prefix"></i>
+				<input id="salary" type="text" class="validate">
+				<label for="salary">Salary</label>
+			</div>
+			<div class="input-field col s12 m6 l4">
+				<i class="mdi-device-access-time prefix"></i>
+				<input id="time-to-join" type="text" class="validate">
+				<label for="time-to-join">When will he/she join</label>
+			</div>
+		</div>
+		{{#each getEmployees}}
+		<div class="row">
+			<div class="input-field col s12 m6 l2">
+				<i class="mdi-social-person prefix"></i>
+				<input id="name" type="text" class="validate">
+				<label for="name">Name</label>
+			</div>
+			<div class="input-field col s12 m6 l3">
+				<i class="mdi-image-navigate-next prefix"></i>
+				<input id="title" type="text" class="validate">
+				<label for="title">Title</label>
+			</div>
+			<div class="input-field col s12 m6 l3">
+				<i class="mdi-editor-attach-money prefix"></i>
+				<input id="salary" type="text" class="validate">
+				<label for="salary">Salary</label>
+			</div>
+			<div class="input-field col s12 m6 l4">
+				<i class="mdi-device-access-time prefix"></i>
+				<input id="time-to-join" type="text" class="validate">
+				<label for="time-to-join">When will he/she join</label>
+			</div>
+		</div>
+		{{/each}}
+		<div class="row icon-container">
+			<div class="icon-preview col s6 m1">
+				<a id="add-employee" class="btn-floating waves-effect waves-light red">
+				<i class="mdi-content-add"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="sectino">
+		<div class="row">
+			<canvas id="myChart" width="600" height="400"></canvas>
+		</div>
+	</div>
+</div>
+</template>
